@@ -31,5 +31,5 @@ public sealed class Product : BaseObject
 	/// <para>OnlineStore</para>
 	/// <para>Supermarket</para>
 	/// </summary>
-	public StoreType Store { get; init; }
+	public StoreType? Store { get; init; }
 }
