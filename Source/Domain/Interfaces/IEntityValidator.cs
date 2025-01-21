@@ -6,14 +6,12 @@ using Domain.Commons;
 /// Base interface for validating 
 /// entities before performing operations.
 /// </summary>
-public interface IEntityValidator<T, N>
-	where T : BaseObject
-	where N : BaseNotify
+public interface IEntityValidator<T> where T : BaseObject
 {
 	/// <summary>
 	/// Validates the given entity, 
 	/// ensuring it meets the required business rules.
 	/// Returns a notification result indicating success or failure.
 	/// </summary>
-	N OnValidate(T entity);
+	void OnValidate(T entity);
 }
