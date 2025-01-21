@@ -6,7 +6,7 @@
 public abstract class BaseObject
 {
 	/// <summary>
-	/// Foreign key
+	/// Foreign key.
 	/// </summary>
 	public short Id { get; set; }
 }
