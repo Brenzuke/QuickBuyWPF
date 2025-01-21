@@ -6,21 +6,22 @@ using Domain.Commons;
 /// Base interface for implementingoperations, 
 /// including adding, updating, and removing objects from a collection.
 /// </summary>
-public interface IUnitOfWork<T>
+public interface IUnitOfWork<T, N>
 	where T : BaseObject
+	where N : BaseNotify
 {
 	/// <summary>
 	/// Adds a new object to the collection.
 	/// </summary>
-	T Insert(T entity);
+	N Insert(T entity);
 
 	/// <summary>
 	/// Get the object to the collection.
 	/// </summary>
-	T GetById(short id);
+	N GetById(short id);
 
 	/// <summary>
 	/// Removes an object from the collection.
 	/// </summary>
-	T Delete(T entity);
+	N DeleteById(short id);
 }
