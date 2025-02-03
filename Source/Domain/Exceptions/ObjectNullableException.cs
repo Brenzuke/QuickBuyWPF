@@ -1,4 +1,4 @@
 ﻿namespace Domain.Exceptions;
 
-public sealed class ObjectNullableException<T>()
-	: Exception($"The field '{typeof(T).Name}' can't be null!");
+public sealed class ObjectNullableException(string propertyName)
+	: Exception($"The field '{propertyName}' can't be null!");

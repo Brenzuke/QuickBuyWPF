@@ -2,7 +2,7 @@
 
 public enum StoreType : byte
 {
-	PHARMACY = 1,
-	SUPERMARKET = 2,
-	ONLINE_STORE = 3
+	Pharmacy = 1,
+	Supermarket = 2,
+	OnlineStore = 3
 }
