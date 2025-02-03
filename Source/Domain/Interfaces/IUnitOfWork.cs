@@ -3,12 +3,11 @@
 using Domain.Commons;
 
 
-public interface IUnitOfWork<T, N>
-	where T : BaseObject
+public interface IUnitOfWork<T> where T : BaseObject
 {
-	N Insert(T entity);
+	T Insert(T entity);
 
-	N GetById(short id);
+	T GetById(short id);
 
-	N DeleteById(short id);
+	bool DeleteById(short id);
 }

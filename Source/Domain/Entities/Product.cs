@@ -5,11 +5,11 @@ using Domain.Enumerations;
 
 public sealed class Product : BaseObject
 {
-	public string Name { get; init; }
+	public string Name { get; set; }
 
-	public decimal? Price { get; init; }
+	public decimal? Price { get; set; }
 
-	public short? Quantity { get; init; }
+	public short? Quantity { get; set; }
 
-	public StoreType? Store { get; init; }
+	public StoreType? Store { get; set; }
 }
