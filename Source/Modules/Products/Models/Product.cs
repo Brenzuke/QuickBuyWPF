@@ -1,11 +1,12 @@
 ﻿namespace Products.Models;
 
+using Components.Commons;
 using Products.Enumerations;
 
 /// <summary>
 /// Representa uma mercadoria
 /// </summary>
-public sealed class Product
+public sealed class Product : BaseObject
 {
 	/// <summary>
 	/// Identificador

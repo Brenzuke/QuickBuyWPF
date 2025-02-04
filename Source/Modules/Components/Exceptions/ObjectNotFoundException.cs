@@ -6,5 +6,4 @@ using System;
 /// Exceção personalizada 
 /// para objetos não encontrado
 /// </summary>
-public sealed class ObjectNotFoundException<T>()
-	: Exception($"O modelo '{typeof(T).Name}' não foi encontrado!");
+public sealed class ObjectNotFoundException(string message) : Exception(message);

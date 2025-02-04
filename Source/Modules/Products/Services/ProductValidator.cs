@@ -1,6 +1,6 @@
 ﻿namespace Products.Services;
 
 /// <summary>
-/// Validador baseado no modelo
+/// Validador da mercadoria
 /// </summary>
 public sealed class ProductValidator;
