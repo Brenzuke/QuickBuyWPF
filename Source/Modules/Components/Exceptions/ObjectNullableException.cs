@@ -1,4 +1,6 @@
-﻿namespace Products.Exceptions;
+﻿namespace Components.Exceptions;
+
+using System;
 
 /// <summary>
 /// Exceção personalizada para objetos nulos

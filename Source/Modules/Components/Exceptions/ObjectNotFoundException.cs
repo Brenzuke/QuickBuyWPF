@@ -1,4 +1,4 @@
-﻿namespace Products.Exceptions;
+﻿namespace Components.Exceptions;
 
 using System;
 
