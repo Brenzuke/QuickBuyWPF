@@ -1,5 +1,7 @@
 ﻿namespace Products.Exceptions;
 
+using System;
+
 /// <summary>
 /// Exceção personalizada 
 /// para objetos não encontrado
