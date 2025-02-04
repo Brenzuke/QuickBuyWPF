@@ -3,8 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{293ACB05-71BE-47FA-AB3A-8CC6F7C97F85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products", "Modules\Products\Products.csproj", "{6562DCB2-D89D-4DD3-81C2-2188CE8E7CBA}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6562DCB2-D89D-4DD3-81C2-2188CE8E7CBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6562DCB2-D89D-4DD3-81C2-2188CE8E7CBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6562DCB2-D89D-4DD3-81C2-2188CE8E7CBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6562DCB2-D89D-4DD3-81C2-2188CE8E7CBA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6562DCB2-D89D-4DD3-81C2-2188CE8E7CBA} = {293ACB05-71BE-47FA-AB3A-8CC6F7C97F85}
 	EndGlobalSection
 EndGlobal
