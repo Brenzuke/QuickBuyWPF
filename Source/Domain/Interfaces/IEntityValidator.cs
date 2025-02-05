@@ -2,7 +2,16 @@
 
 using Domain.Common;
 
+/// <summary>
+/// Defines a contract for validating entities.
+/// To implement, the class must inherit from
+/// <see cref="BaseObject"/>
+/// </summary>
 public interface IEntityValidator<T> where T : BaseObject
 {
-	bool Validate(T domainObj);
+	/// <summary>
+	/// This method should contain logic to ensure 
+	/// the entity is valid based on its business rules.
+	/// </summary>
+	void Validate(T entity);
 }
