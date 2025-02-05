@@ -8,7 +8,8 @@ using Domain.Common;
 /// To implement, the class must inherit from
 /// <see cref="BaseObject"/>
 /// </summary>
-public interface IUnitOfWork<T> where T : BaseObject
+public interface IUnitOfWork<T>
+	where T : BaseObject
 {
 	/// <summary>
 	/// Inserts a new entity, which inherits

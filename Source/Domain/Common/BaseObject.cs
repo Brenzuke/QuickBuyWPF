@@ -20,12 +20,12 @@ public abstract class BaseObject
 	/// the entity was created.
 	/// Allows retrieval or modification.
 	/// </summary>
-	public DateTime CreatedAt { get; set; }
+	protected DateTime CreatedAt { get; set; }
 
 	/// <summary>
 	/// The date and time when 
 	/// the entity was last updated.
 	/// Allows retrieval or modification.
 	/// </summary>
-	public DateTime UpdatedAt { get; set; }
+	protected DateTime UpdatedAt { get; set; }
 }
