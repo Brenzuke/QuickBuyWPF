@@ -13,19 +13,19 @@ public abstract class BaseObject
 	/// The unique identifier.
 	/// Allows retrieval or modifiation.
 	/// </summary>
-	protected short? Id { get; set; }
+	public short? Id { get; set; }
 
 	/// <summary>
 	/// The date and time when 
 	/// the entity was created.
 	/// Allows retrieval or modification.
 	/// </summary>
-	protected DateTime CreatedAt { get; set; }
+	public DateTime CreatedAt { get; set; }
 
 	/// <summary>
 	/// The date and time when 
 	/// the entity was last updated.
 	/// Allows retrieval or modification.
 	/// </summary>
-	protected DateTime UpdatedAt { get; set; }
+	public DateTime UpdatedAt { get; set; }
 }

@@ -23,12 +23,12 @@ public interface IUnitOfWork<T>
 	/// from <see cref="BaseObject"/> 
 	/// by its unique identifier.
 	/// </summary>
-	T GetById(T entity);
+	T GetById(int id);
 
 	/// <summary>
 	/// Deletes an entity, which inherits 
 	/// from <see cref="BaseObject"/>,
 	/// by its unique identifier.
 	/// </summary>
-	void DeleteById(T entity);
+	void DeleteById(int id);
 }
