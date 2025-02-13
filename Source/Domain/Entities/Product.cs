@@ -21,19 +21,19 @@ public sealed class Product : BaseObject
 	/// used to calculate the total of transactions.
 	/// Allows retrieval or modification.
 	/// </summary>
-	public decimal? Price { get; set; }
+	public decimal Price { get; set; }
 
 	/// <summary>
 	/// The quantity must be a positive value,
 	/// represents the current stock of the product in the store. 
 	/// Allows retrieval or modification.
 	/// </summary>
-	public short? Quantity { get; set; }
+	public short Quantity { get; set; }
 
 	/// <summary> 
 	/// This field associates the product with a specific store type, 
 	/// such as a pharmacy, supermarket, online store, etc.
 	/// Allows retrieval or modification.
 	/// </summary>
-	public StoreType? Store { get; set; }
+	public StoreType Store { get; set; }
 }

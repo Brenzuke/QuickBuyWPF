@@ -7,5 +7,4 @@ using System;
 /// that is thrown when an entity 
 /// cannot be found.
 /// </summary>
-public sealed class EntityNotFoundException(string message)
-	: Exception(message);
+public sealed class EntityNotFoundException(string message) : Exception(message);
