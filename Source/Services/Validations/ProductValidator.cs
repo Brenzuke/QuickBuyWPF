@@ -1,9 +1,9 @@
-﻿namespace Services.Validations;
+﻿namespace Application.Validations;
 
+using Application.Extensives;
+using Application.Interfaces;
 using Domain.Entities;
 using Domain.Exceptions;
-using Services.Extensives;
-using Services.Interfaces;
 
 /// <summary>
 /// A validator class responsible for validating the properties of the Product entity.

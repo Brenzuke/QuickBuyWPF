@@ -1,4 +1,4 @@
-﻿namespace Services.Extensives;
+﻿namespace Application.Extensives;
 
 /// <summary>
 /// Contains extension methods for <see cref="short"/> type, 

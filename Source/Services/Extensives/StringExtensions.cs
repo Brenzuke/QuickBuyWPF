@@ -1,4 +1,4 @@
-﻿namespace Services.Extensives;
+﻿namespace Application.Extensives;
 
 using System.Linq;
 
