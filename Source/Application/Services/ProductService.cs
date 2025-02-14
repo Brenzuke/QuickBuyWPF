@@ -1,4 +1,5 @@
-﻿namespace Application.Services;
+﻿#pragma warning disable IDE0044
+namespace Application.Services;
 
 using Application.Extensives;
 using Application.Interfaces;
@@ -11,8 +12,13 @@ using System.Linq;
 /// managing product operations. This class 
 /// implements the IProductService interface 
 /// </summary>
-public sealed class ProductService(ISet<Product> Products) : IProductService
+public sealed class ProductService : IProductService
 {
+	/// <summary>
+	/// Optado por não possuir produtos duplicados
+	/// </summary>
+	private HashSet<Product> _products = [];
+
 	/// <summary>
 	/// Inserts a new product into the 
 	/// product collection if it's not null
@@ -20,20 +26,27 @@ public sealed class ProductService(ISet<Product> Products) : IProductService
 	public void Insert(Product entity)
 	{
 		if (entity.IsNull()) return;
-		else Products.Add(entity);
+		else _products.Add(entity);
 	}
 
 	/// <summary>
 	/// Retrieves a product by 
 	/// its unique identifier
 	/// </summary>
-	public Product GetById(int id) =>
-		Products.FirstOrDefault(product => product.Id == id);
+	public Product GetByName(string name) =>
+		_products.FirstOrDefault(product => product.Name == name);
+
+	/// <summary>
+	/// Retrieves the complete set of 
+	/// products available in memory
+	/// </summary>
+	public ISet<Product> GetAll() =>
+		_products;
 
 	/// <summary>
 	/// Deletes a product by 
 	/// its unique identifier
 	/// </summary>
-	public void DeleteById(int id) =>
-		Products.Remove(GetById(id));
+	public void DeleteByName(string name) =>
+		_products.Remove(GetByName(name));
 }
