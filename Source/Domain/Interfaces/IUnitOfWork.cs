@@ -1,6 +1,7 @@
 ﻿namespace Domain.Interfaces;
 
 using Domain.Common;
+using System.Collections.Generic;
 
 /// <summary>
 /// Defines a contract for manages 
@@ -8,8 +9,7 @@ using Domain.Common;
 /// To implement, the class must inherit from
 /// <see cref="BaseObject"/>
 /// </summary>
-public interface IUnitOfWork<T>
-	where T : BaseObject
+public interface IUnitOfWork<T> where T : BaseObject
 {
 	/// <summary>
 	/// Inserts a new entity, which inherits
@@ -23,12 +23,18 @@ public interface IUnitOfWork<T>
 	/// from <see cref="BaseObject"/> 
 	/// by its unique identifier.
 	/// </summary>
-	T GetById(int id);
+	T GetByName(string name);
+
+	/// <summary>
+	/// Retrieves all entities of type must 
+	/// inherit from <see cref="BaseObject"/>
+	/// </summary>
+	ISet<T> GetAll();
 
 	/// <summary>
 	/// Deletes an entity, which inherits 
 	/// from <see cref="BaseObject"/>,
 	/// by its unique identifier.
 	/// </summary>
-	void DeleteById(int id);
+	void DeleteByName(string name);
 }

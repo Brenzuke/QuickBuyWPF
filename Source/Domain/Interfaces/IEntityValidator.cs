@@ -7,8 +7,7 @@ using Domain.Common;
 /// To implement, the class must inherit from
 /// <see cref="BaseObject"/>
 /// </summary>
-public interface IEntityValidator<T>
-	where T : BaseObject
+public interface IEntityValidator<T> where T : BaseObject
 {
 	/// <summary>
 	/// This method should contain logic to ensure 

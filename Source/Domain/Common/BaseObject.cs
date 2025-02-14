@@ -10,10 +10,10 @@ using System;
 public abstract class BaseObject
 {
 	/// <summary>
-	/// The unique identifier.
-	/// Allows retrieval or modifiation.
+	/// The name is a unique and descriptive.
+	/// Allows retrieval or modification
 	/// </summary>
-	public short? Id { get; set; }
+	public string Name { get; set; }
 
 	/// <summary>
 	/// The date and time when 
@@ -21,11 +21,4 @@ public abstract class BaseObject
 	/// Allows retrieval or modification.
 	/// </summary>
 	public DateTime CreatedAt { get; set; }
-
-	/// <summary>
-	/// The date and time when 
-	/// the entity was last updated.
-	/// Allows retrieval or modification.
-	/// </summary>
-	public DateTime UpdatedAt { get; set; }
 }

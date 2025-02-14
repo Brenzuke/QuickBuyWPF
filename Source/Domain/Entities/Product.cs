@@ -11,12 +11,6 @@ using Domain.Enumerations;
 public sealed class Product : BaseObject
 {
 	/// <summary>
-	/// The name is a unique and descriptive.
-	/// Allows retrieval or modification
-	/// </summary>
-	public string Name { get; set; }
-
-	/// <summary>
 	/// The price must be a positive value, 
 	/// used to calculate the total of transactions.
 	/// Allows retrieval or modification.
