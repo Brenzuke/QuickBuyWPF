@@ -13,10 +13,4 @@ public static class ShortExtensions
 	/// value is negative (less than zero)
 	/// </summary>
 	public static bool IsNegative(this short value) => value < 1;
-
-	/// <summary>
-	/// Extension method that checks if a <see cref="short"/> 
-	/// value is greater than the provided minimum value
-	/// </summary>
-	public static bool GreaterThan(this short value, short minValue) => value < minValue;
 }

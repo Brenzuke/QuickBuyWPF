@@ -12,10 +12,4 @@ public static class NumericExtensions
 	/// value is negative (less than zero)
 	/// </summary>
 	public static bool IsNegative(this int value) => value < 1;
-
-	/// <summary>
-	/// Extension method that checks if an <see cref="int"/> 
-	/// value is greater than the provided minimum value
-	/// </summary>
-	public static bool GreaterThan(this int value, decimal minValue) => value < minValue;
 }

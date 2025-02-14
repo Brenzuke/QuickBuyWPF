@@ -1,9 +1,9 @@
-﻿#pragma warning disable IDE0044
-namespace Application.Services;
+﻿namespace Application.Services;
 
 using Application.Extensives;
 using Application.Interfaces;
 using Domain.Entities;
+using Domain.Exceptions;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -17,7 +17,7 @@ public sealed class ProductService : IProductService
 	/// <summary>
 	/// Optado por não possuir produtos duplicados
 	/// </summary>
-	private HashSet<Product> _products = [];
+	private readonly HashSet<Product> _products = [];
 
 	/// <summary>
 	/// Inserts a new product into the 
@@ -34,7 +34,8 @@ public sealed class ProductService : IProductService
 	/// its unique identifier
 	/// </summary>
 	public Product GetByName(string name) =>
-		_products.FirstOrDefault(product => product.Name == name);
+		_products.FirstOrDefault(product => product.Name == name) ??
+			throw new EntityNotFoundException($"O produto '{name}' não foi encontrado!");
 
 	/// <summary>
 	/// Retrieves the complete set of 

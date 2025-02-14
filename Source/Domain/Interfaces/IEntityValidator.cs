@@ -13,5 +13,5 @@ public interface IEntityValidator<T> where T : BaseObject
 	/// This method should contain logic to ensure 
 	/// the entity is valid based on its business rules.
 	/// </summary>
-	void Validate(T entity);
+	void OnValidate(T entity);
 }
