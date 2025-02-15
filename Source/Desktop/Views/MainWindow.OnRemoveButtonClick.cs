@@ -1,4 +1,4 @@
-﻿namespace UI;
+﻿namespace Desktop.Views;
 
 using Domain.Entities;
 using System.Windows;

@@ -1,4 +1,5 @@
-﻿namespace UI;
+﻿namespace Desktop.Views;
+
 using System.Windows;
 
 /// <summary>

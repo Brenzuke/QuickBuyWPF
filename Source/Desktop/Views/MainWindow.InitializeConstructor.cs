@@ -1,4 +1,4 @@
-﻿namespace UI;
+﻿namespace Desktop.Views;
 
 using Application.Services;
 using Application.Validations;

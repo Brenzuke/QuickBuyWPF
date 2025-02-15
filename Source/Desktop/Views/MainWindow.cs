@@ -1,6 +1,6 @@
 ﻿#pragma warning disable IDE0079
 #pragma warning disable CA1859
-namespace UI;
+namespace Desktop.Views;
 
 using Domain.Entities;
 using Domain.Interfaces;
