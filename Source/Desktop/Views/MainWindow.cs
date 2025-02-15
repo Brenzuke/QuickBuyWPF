@@ -1,9 +1,7 @@
-﻿#pragma warning disable IDE0079
-#pragma warning disable CA1859
-namespace Desktop.Views;
+﻿namespace Desktop.Views;
 
-using Domain.Entities;
-using Domain.Interfaces;
+using Application.Services;
+using Application.Validations;
 using System.Windows;
 
 /// <summary>
@@ -14,16 +12,19 @@ public partial class MainWindow : Window
 	/// <summary>
 	/// Interface base para metodos de gerenciamentos
 	/// </summary>
-	private IUnitOfWork<Product> _service;
+	private ProductService _service;
 
 	/// <summary>
 	/// Interface base para validações
 	/// </summary>
-	private IEntityValidator<Product> _validator;
+	private ProductValidator _validator;
 
 	/// <summary>
 	/// Construtor padrão
 	/// </summary>
-	public MainWindow() =>
+	public MainWindow()
+	{
+		InitializeComponent();
 		InitializeConstructor();
+	}
 }

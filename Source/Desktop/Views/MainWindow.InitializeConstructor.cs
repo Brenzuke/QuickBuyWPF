@@ -1,7 +1,5 @@
 ﻿namespace Desktop.Views;
 
-using Application.Services;
-using Application.Validations;
 using System.Windows;
 
 /// <summary>
@@ -14,9 +12,8 @@ public partial class MainWindow : Window
 	/// </summary>
 	public void InitializeConstructor()
 	{
-		InitializeComponent();
+		_service = new();
+		_validator = new();
 		StoreTypeCombo.SelectedIndex = 1;
-		_service = new ProductService();
-		_validator = new ProductValidator();
 	}
 }

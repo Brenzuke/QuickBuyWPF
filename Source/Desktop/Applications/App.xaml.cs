@@ -1,4 +1,4 @@
-﻿namespace UI;
+﻿namespace Desktop.Applications;
 
 using System.Windows;
 
