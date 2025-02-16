@@ -19,13 +19,6 @@ public interface IUnitOfWork<T> where T : BaseObject
 	void Insert(T entity);
 
 	/// <summary>
-	/// Retrieves an entity, which inherits
-	/// from <see cref="BaseObject"/> 
-	/// by its unique identifier.
-	/// </summary>
-	T GetByName(string name);
-
-	/// <summary>
 	/// Retrieves all entities of type must 
 	/// inherit from <see cref="BaseObject"/>
 	/// </summary>

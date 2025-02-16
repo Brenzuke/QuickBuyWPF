@@ -36,5 +36,8 @@ public sealed class Product : BaseObject
 	/// of the product with its details
 	/// </summary>
 	public override string ToString() =>
-		$"{Name}: {Quantity}X - {Price:C} - ({Store})";
+		$"Nome: {Name}\n" +
+		$"Preço: {Price:C}\n" +
+		$"Comércio: {Store}" +
+		$"Quantidade: {Quantity}\n";
 }
