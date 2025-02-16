@@ -13,8 +13,5 @@ public partial class MainWindow : Window
 	/// of all products in the cart
 	/// </summary>
 	private decimal CalculatedItem() =>
-		_service
-			.GetAll()
-			.Sum(product =>
-				product.Price * product.Quantity);
+		_service.GetAll().Sum(CalculateProductTotal);
 }
