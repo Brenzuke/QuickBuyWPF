@@ -39,12 +39,11 @@
 		<ListBox x:Name="CartListBox" Grid.Row="5" Grid.ColumnSpan="2" Margin="5">
 			<ListBox.ItemTemplate>
 				<DataTemplate>
-					<ListBoxItem>
-						<StackPanel Orientation="Horizontal">
-							<TextBlock Text="{Binding}" Width="650"/>
-							<Button Content="Remover" Margin="5" Click="OnRemoveButtonClick"/>
-						</StackPanel>
-					</ListBoxItem>
+					<StackPanel Orientation="Horizontal">
+						<TextBlock Text="{Binding}" Width="650"/>
+						<Button Content="Remover" Margin="5" Click="OnRemoveButtonClick" 
+                        CommandParameter="{Binding}" />
+					</StackPanel>
 				</DataTemplate>
 			</ListBox.ItemTemplate>
 		</ListBox>

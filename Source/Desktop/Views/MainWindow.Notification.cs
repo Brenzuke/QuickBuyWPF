@@ -12,5 +12,5 @@ public partial class MainWindow : Window
 	/// interface when a validation error occurs
 	/// </summary>
 	private static void Notification(string message) =>
-		MessageBox.Show(message, "Erro de validação", MessageBoxButton.OK, MessageBoxImage.Warning);
+		MessageBox.Show(message, "Preenchimento incorreto", MessageBoxButton.OK, MessageBoxImage.Warning);
 }

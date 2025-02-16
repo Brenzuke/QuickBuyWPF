@@ -14,8 +14,8 @@ public partial class MainWindow
 	/// </summary>
 	private void ValidateFields()
 	{
-		if (NameTextBox.Text.IsNull()) throw new PropertyRequiredException("O nome é obrigatório");
-		if (PriceTextBox.Text.IsNull()) throw new PropertyRequiredException("O preço é obrigatório");
-		if (QuantityTextBox.Text.IsNull()) throw new PropertyRequiredException("A quantidade é necessária");
+		if (NameTextBox.Text.IsNull()) throw new PropertyRequiredException("Por favor, preencha o campo Nome.");
+		if (PriceTextBox.Text.IsNull()) throw new PropertyRequiredException("Por favor, preencha o campo Preço.");
+		if (QuantityTextBox.Text.IsNull()) throw new PropertyRequiredException("Por favor, preencha o campo Quantidade.");
 	}
 }

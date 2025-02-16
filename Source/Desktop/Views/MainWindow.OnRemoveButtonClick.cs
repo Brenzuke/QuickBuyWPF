@@ -15,7 +15,7 @@ public partial class MainWindow : Window
 	/// </summary>
 	private void OnRemoveButtonClick(object sender, RoutedEventArgs e)
 	{
-		if (sender is Button button && button.Tag is Product selectedProduct)
+		if (sender is Button button && button.CommandParameter is Product selectedProduct)
 		{
 			_service.DeleteByName(selectedProduct.Name);
 			UpdateCartDisplay();
