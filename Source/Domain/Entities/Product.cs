@@ -30,4 +30,11 @@ public sealed class Product : BaseObject
 	/// Allows retrieval or modification.
 	/// </summary>
 	public StoreType Store { get; set; }
+
+	/// <summary>
+	/// Returns a string representation 
+	/// of the product with its details
+	/// </summary>
+	public override string ToString() =>
+		$"{Name}: {Quantity}X - {Price:C} - ({Store})";
 }
