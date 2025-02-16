@@ -30,14 +30,6 @@ public sealed class ProductService : IProductService
 	}
 
 	/// <summary>
-	/// Retrieves a product by 
-	/// its unique identifier
-	/// </summary>
-	public Product GetByName(string name) =>
-		_products.FirstOrDefault(product => product.Name == name) ??
-			throw new EntityNotFoundException($"O produto '{name}' não foi encontrado!");
-
-	/// <summary>
 	/// Retrieves the complete set of 
 	/// products available in memory
 	/// </summary>
@@ -48,6 +40,13 @@ public sealed class ProductService : IProductService
 	/// Deletes a product by 
 	/// its unique identifier
 	/// </summary>
-	public void DeleteByName(string name) =>
-		_products.Remove(GetByName(name));
+	public void DeleteByName(string name)
+	{
+		Product productExisting = _products
+			.FirstOrDefault(product =>
+				product.Name == name);
+
+		if (!productExisting.IsNull()) _products.Remove(productExisting);
+		else throw new EntityNotFoundException($"O produto '{name}' não foi encontrado!");
+	}
 }
