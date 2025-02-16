@@ -3,7 +3,6 @@
 using Application.Extensives;
 using Application.Interfaces;
 using Domain.Entities;
-using Domain.Exceptions;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -47,6 +46,5 @@ public sealed class ProductService : IProductService
 				product.Name == name);
 
 		if (!productExisting.IsNull()) _products.Remove(productExisting);
-		else throw new EntityNotFoundException($"O produto '{name}' não foi encontrado!");
 	}
 }
