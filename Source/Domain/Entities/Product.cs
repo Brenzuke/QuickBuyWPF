@@ -2,6 +2,7 @@
 
 using Domain.Common;
 using Domain.Enumerations;
+using Domain.Extensions;
 
 /// <summary>
 /// Represents a product in the system.
@@ -38,6 +39,6 @@ public sealed class Product : BaseObject
 	public override string ToString() =>
 		$"Nome: {Name}\n" +
 		$"Preço: {Price:C}\n" +
-		$"Comércio: {Store}" +
+		$"Comércio: {Store.ToPortuguese()}\n" +
 		$"Quantidade: {Quantity}\n";
 }
