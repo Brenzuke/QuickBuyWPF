@@ -8,12 +8,13 @@ using System.Windows;
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Initializes required fields and settings 
-	/// when the constructor is called
+	/// Clears input fields 
+	/// after saving a product
 	/// </summary>
-	public void InitializeConstructor()
+	private void ClearFields()
 	{
-		_service = new();
-		StoreTypeCombo.SelectedIndex = 1;
+		NameTextBox.Text = string.Empty;
+		PriceTextBox.Text = string.Empty;
+		QuantityTextBox.Text = string.Empty;
 	}
 }

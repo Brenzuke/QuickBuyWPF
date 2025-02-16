@@ -1,5 +1,6 @@
 ﻿namespace Desktop.Views;
 
+using System.Linq;
 using System.Windows;
 
 /// <summary>
@@ -8,12 +9,9 @@ using System.Windows;
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Initializes required fields and settings 
-	/// when the constructor is called
+	/// Calculates the total value 
+	/// of all products in the cart
 	/// </summary>
-	public void InitializeConstructor()
-	{
-		_service = new();
-		StoreTypeCombo.SelectedIndex = 1;
-	}
+	private decimal CalculatedItem() =>
+		_service.GetAll().Sum(product => product.Price * product.Quantity);
 }

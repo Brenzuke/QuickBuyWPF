@@ -8,7 +8,8 @@ using System.Windows;
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Conforme cada produto inserido, é atualizado em tempo real
+	/// Updates the shopping cart display in real-time 
+	/// whenever a product is added or removed.
 	/// </summary>
 	private void UpdateCartDisplay()
 	{

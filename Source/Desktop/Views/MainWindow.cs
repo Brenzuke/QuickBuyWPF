@@ -1,7 +1,6 @@
 ﻿namespace Desktop.Views;
 
 using Application.Services;
-using Application.Validations;
 using System.Windows;
 
 /// <summary>
@@ -10,17 +9,13 @@ using System.Windows;
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Interface base para metodos de gerenciamentos
+	/// Base service for managing 
+	/// product-related operations
 	/// </summary>
 	private ProductService _service;
 
 	/// <summary>
-	/// Interface base para validações
-	/// </summary>
-	private ProductValidator _validator;
-
-	/// <summary>
-	/// Construtor padrão
+	/// Default constructor
 	/// </summary>
 	public MainWindow()
 	{

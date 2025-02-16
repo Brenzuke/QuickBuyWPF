@@ -1,7 +1,4 @@
 ﻿namespace Application.Extensives;
-
-using System.Linq;
-
 /// <summary>
 /// Contains extension methods for the <see cref="string"/> type, 
 /// allowing common string operations to be performed in a more
@@ -15,11 +12,4 @@ public static class StringExtensions
 	/// </summary>
 	public static bool IsNull(this string value)
 		=> string.IsNullOrWhiteSpace(value);
-
-	/// <summary>
-	/// Extension method that extracts only 
-	/// the numeric digits from a <see cref="string"/>
-	/// </summary>
-	public static string GetDigits(this string value)
-		=> new(value.Where(char.IsDigit).ToArray());
 }

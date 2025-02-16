@@ -8,12 +8,9 @@ using System.Windows;
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Initializes required fields and settings 
-	/// when the constructor is called
+	/// Updates the total value 
+	/// of the products in the cart
 	/// </summary>
-	public void InitializeConstructor()
-	{
-		_service = new();
-		StoreTypeCombo.SelectedIndex = 1;
-	}
+	private void UpdateTotal() =>
+		TotalTextBlock.Text = $"R$ {CalculatedItem():N2}";
 }

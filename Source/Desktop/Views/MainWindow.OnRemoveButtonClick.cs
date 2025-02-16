@@ -2,6 +2,7 @@
 
 using Domain.Entities;
 using System.Windows;
+using System.Windows.Controls;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml
@@ -9,11 +10,12 @@ using System.Windows;
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Dispara o evento de remoção
+	/// Triggers the event to remove a 
+	/// selected product from the cart
 	/// </summary>
 	private void OnRemoveButtonClick(object sender, RoutedEventArgs e)
 	{
-		if (CartListBox.SelectedItem is Product selectedProduct)
+		if (sender is Button button && button.Tag is Product selectedProduct)
 		{
 			_service.DeleteByName(selectedProduct.Name);
 			UpdateCartDisplay();
