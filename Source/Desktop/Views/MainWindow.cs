@@ -12,7 +12,7 @@ public partial class MainWindow : Window
 	/// Base service for managing 
 	/// product-related operations
 	/// </summary>
-	private ProductService _service;
+	private readonly ProductService _service = new();
 
 	/// <summary>
 	/// Default constructor
@@ -20,6 +20,6 @@ public partial class MainWindow : Window
 	public MainWindow()
 	{
 		InitializeComponent();
-		InitializeConstructor();
+		StoreTypeCombo.SelectedIndex = 1;
 	}
 }

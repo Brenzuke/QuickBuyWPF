@@ -6,13 +6,13 @@ using Domain.Enumerations;
 /// Extension methods for the 
 /// Product class and related entities
 /// </summary>
-public static class ProductExtensions
+internal static class ProductExtensions
 {
 	/// <summary>
 	/// Converts the StoreType 
 	/// value to its Portuguese name
 	/// </summary>
-	public static string ToPortuguese(this StoreType value)
+	internal static string ToPortuguese(this StoreType value)
 	{
 		return value switch
 		{
