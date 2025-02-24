@@ -26,13 +26,6 @@ public interface IUnitOfWork<T> where T : BaseObject
 	ICollection<T> GetAll();
 
 	/// <summary>
-	/// Updates an existing entity, which inherits
-	/// from <see cref="BaseObject"/> 
-	/// in the persistence store.
-	/// </summary>
-	void Update(T entity);
-
-	/// <summary>
 	/// Deletes an entity, which inherits 
 	/// from <see cref="BaseObject"/>,
 	/// by its unique identifier.
