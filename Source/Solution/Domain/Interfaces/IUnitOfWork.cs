@@ -19,8 +19,9 @@ public interface IUnitOfWork<T> where T : BaseObject
 	void Insert(T entity);
 
 	/// <summary>
-	/// Retrieves all entities of type must 
-	/// inherit from <see cref="BaseObject"/>
+	/// Retrieves all entities 
+	/// of type must inherit from 
+	/// <see cref="BaseObject"/>
 	/// </summary>
 	ICollection<T> GetAll();
 

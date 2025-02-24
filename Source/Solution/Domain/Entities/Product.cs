@@ -5,7 +5,7 @@ using Domain.Common;
 /// <summary>
 /// Represents a product in the system.
 /// Contains essential information such 
-/// as the name, price, quantity, and store type.
+/// as the name, price, quantity.
 /// </summary>
 public sealed class Product : BaseObject
 {
@@ -18,8 +18,9 @@ public sealed class Product : BaseObject
 
 	/// <summary>
 	/// The quantity must be a positive value,
-	/// represents the current stock of the product in the store. 
-	/// Allows retrieval or modification.
+	/// represents the current stock of the 
+	/// product in the store. Allows 
+	/// retrieval or modification.
 	/// </summary>
 	public short Quantity { get; set; }
 
