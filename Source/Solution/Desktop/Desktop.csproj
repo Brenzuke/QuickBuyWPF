@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<UseWPF>true</UseWPF>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Images\ShoppingCart.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ApplicationDefinition Include="Views\App.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Images\ShoppingCart.png" />
+	</ItemGroup>
+
+</Project>
