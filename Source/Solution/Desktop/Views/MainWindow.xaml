@@ -3,10 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Desktop.Models"
-        Title="QuickBuy"
-        Height="500" Width="500"
+        xmlns:local="clr-namespace:Desktop.Models.Forms"
         WindowStartupLocation="CenterScreen"
-        Icon="../Images/ShoppingCart.png"
-        Background="#F4F7FA">
+        Style="{StaticResource WindowStyle}">
+
+	<Grid Margin="20">
+		<local:ProductForm/>
+	</Grid>
 </Window>
