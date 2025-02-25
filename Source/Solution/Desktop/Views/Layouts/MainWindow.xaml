@@ -54,6 +54,7 @@
 						<GridViewColumn.CellTemplate>
 							<DataTemplate>
 								<Button Content="Remover"
+								Click="DeleteProductFromCart"
                                 Tag="{Binding}" 
                                 Background="Red" Foreground="White"
                                 Padding="5"/>

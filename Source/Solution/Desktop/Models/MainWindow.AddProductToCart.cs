@@ -1,6 +1,5 @@
 ﻿namespace Desktop.Models;
 
-using Application.Services;
 using Domain.Entities;
 using System;
 using System.Linq;
@@ -22,9 +21,8 @@ public partial class MainWindow : Window
 		try
 		{
 			OnValidate();
-			ProductService service = new();
 			Product product = CreateProduct();
-			service.Insert(product);
+			_service.Insert(product);
 			ProductList.Items.Add(product);
 			UpdateTotal([.. ProductList.Items.Cast<Product>()]);
 			ClearFields();
