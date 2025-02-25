@@ -1,15 +1,15 @@
-﻿namespace Desktop.Models.Forms;
+﻿namespace Desktop.Models;
 
 using Application.Extensives;
 using Domain.Exceptions;
 using System;
-using System.Windows.Controls;
+using System.Windows;
 
 /// <summary>
 /// Interaction logic 
-/// for ProductForm.xaml
+/// for MainWindow.xaml
 /// </summary>
-public partial class ProductForm : UserControl
+public partial class MainWindow : Window
 {
 	/// <summary>
 	/// Validates the product data checks 
@@ -24,7 +24,7 @@ public partial class ProductForm : UserControl
 			throw new PropertyRequiredException("O preço do produto é obrigatório!");
 
 		if (QuantityField.Text.IsNull())
-			throw new PropertyRequiredException("A quantidade do produto é obrigatório!");
+			throw new PropertyRequiredException("A quantidade do produto é obrigatória!");
 
 		if (Convert.ToDecimal(PriceField.Text).IsNegative())
 			throw new PropertyConstraintException("O preço não pode ser negativo!");
