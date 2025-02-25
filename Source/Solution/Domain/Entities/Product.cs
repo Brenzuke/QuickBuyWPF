@@ -25,11 +25,8 @@ public sealed class Product : BaseObject
 	public short Quantity { get; set; }
 
 	/// <summary>
-	/// Returns a string representation 
-	/// of the product with its details
+	/// Gets the total value 
+	/// of the product based on 
 	/// </summary>
-	public override string ToString() =>
-		$"Nome: {Name}\n" +
-		$"Preço: {Price:C}\n" +
-		$"Quantidade: {Quantity}\n";
+	public decimal Total => Price * Quantity;
 }
