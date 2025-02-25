@@ -17,7 +17,7 @@ public sealed class ProductService : IProductService
 	/// a <see cref="HashSet{T}"/> to 
 	/// prevent duplicates
 	/// </summary>
-	private readonly HashSet<Product> _products = [];
+	public HashSet<Product> Products { get; private set; } = [];
 
 	/// <summary>
 	/// Inserts a new product into the 
@@ -26,7 +26,7 @@ public sealed class ProductService : IProductService
 	public void Insert(Product entity)
 	{
 		if (entity.IsNull()) return;
-		else _products.Add(entity);
+		else Products.Add(entity);
 	}
 
 	/// <summary>
@@ -34,7 +34,7 @@ public sealed class ProductService : IProductService
 	/// products available in memory
 	/// </summary>
 	public ICollection<Product> GetAll() =>
-		_products;
+		Products;
 
 	/// <summary>
 	/// Deletes a product by 
@@ -42,10 +42,10 @@ public sealed class ProductService : IProductService
 	/// </summary>
 	public void DeleteByName(string name)
 	{
-		Product product = _products
+		Product product = Products
 			.GetByName(name);
 
 		if (product.IsNull()) return;
-		else _products.Remove(product);
+		else Products.Remove(product);
 	}
 }
