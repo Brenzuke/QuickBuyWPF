@@ -12,5 +12,5 @@ public interface IExportService<T>
 	/// <summary>
 	/// Exports a list of data.
 	/// </summary>
-	Task ExportAsync(IList<T> data, string filePath);
+	Task ExportAsync(ISet<T> data, string filePath);
 }
