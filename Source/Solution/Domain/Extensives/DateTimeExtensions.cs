@@ -10,6 +10,6 @@ public static class DateTimeExtensions
 	/// <summary>
 	/// Formatted creation date (dd/MM/yyyy).
 	/// </summary>
-	public static void ToFormattedBrazilianDate(this DateTime value) =>
+	public static string ToFormattedBrazilianDate(this DateTime value) =>
 		value.ToString("dd/MM/yyyy");
 }

@@ -20,5 +20,5 @@ public sealed class Product : BaseObject
 	/// <summary>
 	/// Total value based on price and quantity.
 	/// </summary>
-	public decimal Total => Price * Quantity;
+	public decimal SubTotal => Price * Quantity;
 }
