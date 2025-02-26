@@ -16,8 +16,8 @@ public partial class MainWindow : Window
 	/// </summary>
 	private void OnValidateFormat()
 	{
-		if (!PriceField.Text.IsMatch()) throw new UnsupportedPropertyException("O preço deve ter apenas números!");
 		if (!NameField.Text.IsMatch()) throw new UnsupportedPropertyException("O nome não pode ter caracteres especiais!");
-		if (!QuantityField.Text.IsMatch()) throw new UnsupportedPropertyException("A quantidade deve ter apenas números!");
+		if (!PriceField.Text.ToDecimal().IsMatch()) throw new UnsupportedPropertyException("O preço deve ter apenas números!");
+		if (!QuantityField.Text.ToShort().IsMatch()) throw new UnsupportedPropertyException("A quantidade deve ter apenas números!");
 	}
 }

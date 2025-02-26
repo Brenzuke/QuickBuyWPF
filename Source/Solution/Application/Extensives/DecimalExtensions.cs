@@ -24,5 +24,5 @@ public static class DecimalExtensions
 	/// contains only numbers.
 	/// </summary>
 	public static bool IsMatch(this decimal value)
-		=> Regex.IsMatch(Convert.ToString(value), @"^\d+$");
+		=> Regex.IsMatch(Convert.ToString(value), @"^[0-9]+([.,][0-9]+)?$");
 }
