@@ -9,13 +9,13 @@ using System.Windows;
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Validates the product data checks 
-	/// for required fields and constraints
+	/// Handles the deletion of a product 
+	/// by its name and updates 
+	/// the UI accordingly
 	/// </summary>
-	private void OnValidate()
+	private void HandleProductDeletion(string productName)
 	{
-		OnValidateRequiredFields();
-		OnValidateFormat();
-		OnValidateConstraints();
+		_service.DeleteByName(productName);
+		RefreshUI();
 	}
 }

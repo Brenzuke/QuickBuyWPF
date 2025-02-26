@@ -1,5 +1,6 @@
 ﻿namespace Desktop.Models;
 
+using Domain.Entities;
 using System.Windows;
 
 /// <summary>
@@ -9,9 +10,12 @@ using System.Windows;
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Displays an informational 
-	/// message to the user
+	/// Saves the product 
+	/// using the service
 	/// </summary>
-	private static void NotificationOk() =>
-		MessageBox.Show("Produto adicionado!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+	private void SaveProduct()
+	{
+		Product product = CreateProduct();
+		_service.Insert(product);
+	}
 }

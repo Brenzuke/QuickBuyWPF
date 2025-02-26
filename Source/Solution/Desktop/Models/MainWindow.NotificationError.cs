@@ -1,5 +1,6 @@
 ﻿namespace Desktop.Models;
 
+using System;
 using System.Windows;
 
 /// <summary>
@@ -9,9 +10,9 @@ using System.Windows;
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Displays a warning 
+	/// Displays a error 
 	/// message to the user
 	/// </summary>
-	private static MessageBoxResult NotificationWarning(string productName) =>
-		MessageBox.Show($"Deseja remover {productName}?", "Aviso", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+	private static void NotificationError(Exception ex) =>
+		MessageBox.Show(ex.Message, "Erro de validação", MessageBoxButton.OK, MessageBoxImage.Error);
 }

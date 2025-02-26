@@ -1,8 +1,6 @@
 ﻿namespace Desktop.Models;
 
-using Domain.Entities;
 using System;
-using System.Linq;
 using System.Windows;
 
 /// <summary>
@@ -12,22 +10,23 @@ using System.Windows;
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Adds the product to the shopping cart 
-	/// by retrieving values from 
-	/// the input fields
+	/// Adds a product to the 
+	/// cart using input 
+	/// field values.
 	/// </summary>
 	private void AddProductToCart(object sender, RoutedEventArgs e)
 	{
 		try
 		{
 			OnValidate();
-			Product product = CreateProduct();
-			_service.Insert(product);
-			ProductList.Items.Add(product);
-			UpdateTotal([.. ProductList.Items.Cast<Product>()]);
-			ClearFields();
-			NotificationOk("Produto adicionado!");
+			SaveProduct();
+			RefreshUI();
+			NotificationOk();
 		}
-		catch (Exception ex) { NotificationWarning(ex.Message); }
+		catch (Exception ex)
+		{
+			ClearFields();
+			NotificationError(ex);
+		}
 	}
 }
