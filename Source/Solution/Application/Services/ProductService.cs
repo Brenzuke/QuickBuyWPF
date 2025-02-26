@@ -4,19 +4,19 @@ using Application.Extensives;
 using Application.Interfaces;
 using Domain.Common;
 using Domain.Entities;
+using Domain.Extensives;
 using System.Collections.Generic;
 
 /// <summary>
-/// Manages product operations, 
-/// preventing duplicates.
+/// Manages product operations, preventing duplicates.
 /// </summary>
 public sealed class ProductService : IProductService
 {
 	/// <summary>
-	/// Stores products in 
-	/// a <see cref="HashSet{T}"/>.
+	/// Stores products in a 
+	/// <see cref="HashSet{T}"/>.
 	/// </summary>
-	public HashSet<Product> Products { get; private set; } =
+	public ISet<Product> Products { get; private set; } =
 		new HashSet<Product>(new ProductComparer());
 
 	/// <summary>
@@ -31,7 +31,7 @@ public sealed class ProductService : IProductService
 	/// <summary>
 	/// Returns all stored products.
 	/// </summary>
-	public ICollection<Product> GetAll() =>
+	public IEnumerable<Product> GetAll() =>
 		Products;
 
 	/// <summary>

@@ -32,7 +32,8 @@ public sealed class ExcelExportService : IExportService<Product>
 		worksheet.Cell(1, 2).Value = "Preço";
 		worksheet.Cell(1, 3).Value = "Quantidade";
 		worksheet.Cell(1, 4).Value = "Criado em";
-		worksheet.Cell(1, 5).Value = "Total";
+		worksheet.Cell(1, 5).Value = "Subtotal";
+		worksheet.Cell(1, 6).Value = "Total";
 	}
 
 	/// <summary>
@@ -46,37 +47,12 @@ public sealed class ExcelExportService : IExportService<Product>
 			worksheet.Cell(row, 1).Value = product.Name;
 			worksheet.Cell(row, 2).Value = product.Price;
 			worksheet.Cell(row, 3).Value = product.Quantity;
-			worksheet.Cell(row, 4).Value = product.CreatedAtFormatted;
-			worksheet.Cell(row, 5).Value = product.Total;
+			worksheet.Cell(row, 4).Value = product.CreatedAt;
+			worksheet.Cell(row, 5).Value = product.SubTotal;
 			row++;
 		}
-	}
-
-	/// <summary>
-	/// Applies complete style to the header.
-	/// </summary>
-	private static void ApplyHeaderStyle(IXLWorksheet worksheet)
-	{
-		IXLRange headerRange = worksheet.RangeUsed();
-		headerRange.Style.Font.SetBold(true);
-		headerRange.Style.Font.SetFontSize(12);
-		headerRange.Style.Font.SetFontColor(XLColor.White);
-		headerRange.Style.Border.SetTopBorder(XLBorderStyleValues.Thin);
-		headerRange.Style.Border.SetLeftBorder(XLBorderStyleValues.Thin);
-		headerRange.Style.Border.SetRightBorder(XLBorderStyleValues.Thin);
-		headerRange.Style.Border.SetBottomBorder(XLBorderStyleValues.Thin);
-		headerRange.Style.Fill.SetBackgroundColor(XLColor.FromArgb(0, 32, 96));
-		headerRange.Style.Alignment.SetVertical(XLAlignmentVerticalValues.Center);
-		headerRange.Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
-	}
-
-	/// <summary>
-	/// Applies formatting to rows and columns.
-	/// </summary>
-	private static void ApplyHeaderFormatting(IXLWorksheet worksheet)
-	{
-		foreach (IXLRow row in worksheet.RowsUsed()) row.Height = 34.00;
-		foreach (IXLColumn column in worksheet.ColumnsUsed()) column.Width = 34.00;
+		worksheet.Cell(2, 6).Value = products
+			.Sum(product => product.SubTotal);
 	}
 
 	/// <summary>
@@ -86,11 +62,19 @@ public sealed class ExcelExportService : IExportService<Product>
 	{
 		XLWorkbook workbook = new();
 		IXLWorksheet worksheet = workbook.Worksheets.Add("Produtos");
+		PrepareWorksheet(worksheet, products);
+		return workbook;
+	}
+
+	/// <summary>
+	/// Prepares worksheet with headers, style, and data.
+	/// </summary>
+	private static void PrepareWorksheet(IXLWorksheet worksheet, ISet<Product> products)
+	{
+		ExcelStyleService _style = new(worksheet);
 		AddHeaders(worksheet);
 		AddFillData(worksheet, products);
-		ApplyHeaderStyle(worksheet);
-		ApplyHeaderFormatting(worksheet);
-		return workbook;
+		_style.ApplyStyle();
 	}
 
 	/// <summary>

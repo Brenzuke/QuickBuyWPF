@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 /// <summary>
-/// Defines a contract for exporting
+/// Defines a contract for exporting 
 /// data to different formats.
 /// </summary>
 public interface IExportService<T>
