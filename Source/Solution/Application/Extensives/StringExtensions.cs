@@ -23,7 +23,7 @@ public static class StringExtensions
 	/// numbers, and spaces.
 	/// </summary>
 	public static bool IsMatch(this string value) =>
-		Regex.IsMatch(value, "^[a-zA-Z0-9\\s]+$");
+		Regex.IsMatch(value, @"^[a-zA-ZÀ-ÿ0-9\s]+$");
 
 	/// <summary>
 	/// Converts a 

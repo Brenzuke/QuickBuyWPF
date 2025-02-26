@@ -44,13 +44,13 @@
 		<ListView x:Name="ProductList" Grid.Row="4" Grid.ColumnSpan="2" Margin="5" Height="350">
 			<ListView.View>
 				<GridView>
-					<GridViewColumn Header="Nome" DisplayMemberBinding="{Binding Name}" Width="155"/>
-					<GridViewColumn Header="Preço" DisplayMemberBinding="{Binding Price}" Width="155"/>
-					<GridViewColumn Header="Quantidade" DisplayMemberBinding="{Binding Quantity}" Width="155"/>
+					<GridViewColumn Header="Nome" DisplayMemberBinding="{Binding Name}" Width="151"/>
+					<GridViewColumn Header="Preço" DisplayMemberBinding="{Binding Price}" Width="151"/>
+					<GridViewColumn Header="Quantidade" DisplayMemberBinding="{Binding Quantity}" Width="151"/>
 					<GridViewColumn Header="Criado em" DisplayMemberBinding="{Binding CreatedAt, StringFormat={}{0:dd/MM/yyyy}}"  
-									Width="155"/>
-					<GridViewColumn Header="Total" DisplayMemberBinding="{Binding Total}" Width="155"/>
-					<GridViewColumn Header="Ações" Width="150">
+									Width="151"/>
+					<GridViewColumn Header="Total" DisplayMemberBinding="{Binding Total}" Width="151"/>
+					<GridViewColumn Header="Ações" Width="151">
 						<GridViewColumn.CellTemplate>
 							<DataTemplate>
 								<Button Content="Remover"
