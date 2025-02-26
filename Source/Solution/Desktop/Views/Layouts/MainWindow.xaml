@@ -26,7 +26,7 @@
 
 		<!-- Name -->
 		<Label Content="Nome:" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelStyle}" />
-		<TextBox x:Name="NameField" Grid.Row="0" Grid.Column="1" Style="{StaticResource FieldStyle}" />
+		<TextBox x:Name="NameField" Grid.Row="0" Grid.Column="1" Style="{StaticResource FieldStyle}" TextChanged="Capitalize" />
 
 		<!-- Price -->
 		<Label Content="Preço:" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelStyle}" />
@@ -38,7 +38,7 @@
 
 		<!-- Add to cart -->
 		<Button Content="Adicionar ao Carrinho" Grid.Row="3" Grid.Column="1" Style="{StaticResource ButtonStyle}" 
-			Click="AddProductToCart" />
+			Click="AddProductToCart" ToolTip="Inclui produto no carrinho"/>
 
 		<!-- Views -->
 		<ListView x:Name="ProductList" Grid.Row="4" Grid.ColumnSpan="2" Margin="5" Height="350">
@@ -47,8 +47,7 @@
 					<GridViewColumn Header="Nome" DisplayMemberBinding="{Binding Name}" Width="151"/>
 					<GridViewColumn Header="Preço" DisplayMemberBinding="{Binding Price}" Width="151"/>
 					<GridViewColumn Header="Quantidade" DisplayMemberBinding="{Binding Quantity}" Width="151"/>
-					<GridViewColumn Header="Criado em" DisplayMemberBinding="{Binding CreatedAt, StringFormat={}{0:dd/MM/yyyy}}"  
-									Width="151"/>
+					<GridViewColumn Header="Criado em" DisplayMemberBinding="{Binding CreatedAtFormatted}" Width="151"/>
 					<GridViewColumn Header="Total" DisplayMemberBinding="{Binding Total}" Width="151"/>
 					<GridViewColumn Header="Ações" Width="151">
 						<GridViewColumn.CellTemplate>
@@ -56,7 +55,8 @@
 								<Button Content="Remover"
 										Click="DeleteProductFromCart"
 										Tag="{Binding}" 
-										Style="{StaticResource ButtonStyle}"/>
+										Style="{StaticResource ButtonStyle}"
+										ToolTip="Exclui da lista"/>
 							</DataTemplate>
 						</GridViewColumn.CellTemplate>
 					</GridViewColumn>
@@ -65,7 +65,11 @@
 		</ListView>
 
 		<!-- Total -->
-		<TextBlock x:Name="TotalPriceField" Grid.Row="5" Grid.ColumnSpan="2" Text="Total: R$ 0,00" 
-				   FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" Margin="5"/>
+		<TextBlock x:Name="TotalPriceField" Grid.Row="5" Grid.ColumnSpan="2" Text="Custo Total: R$ 0,00" 
+				   FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" Margin="5,15,5,5" ToolTip="Soma total dos itens"/>
+
+		<!-- Export to Excel -->
+		<Button Content="Exportar para Excel" Grid.Row="6" Grid.ColumnSpan="2" Style="{StaticResource ButtonStyle}"
+                Click="ExportToExcel" HorizontalAlignment="Right" Margin="5,8,5,5" ToolTip="Exportar para uma planilha"/>
 	</Grid>
 </Window>

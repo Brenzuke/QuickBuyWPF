@@ -12,6 +12,6 @@ public partial class MainWindow : Window
 	/// Displays a warning 
 	/// message to the user
 	/// </summary>
-	private static MessageBoxResult NotificationWarning(string productName) =>
-		MessageBox.Show($"Deseja remover {productName}?", "Aviso", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+	private static MessageBoxResult NotificationWarning(string message, string caption, MessageBoxButton button) =>
+		MessageBox.Show(message, caption, button, MessageBoxImage.Warning);
 }

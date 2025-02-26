@@ -21,7 +21,7 @@ public partial class MainWindow : Window
 			OnValidate();
 			SaveProduct();
 			RefreshUI();
-			NotificationOk();
+			NotificationOk("Produto adicionado!", "Sucesso");
 		}
 		catch (Exception ex)
 		{

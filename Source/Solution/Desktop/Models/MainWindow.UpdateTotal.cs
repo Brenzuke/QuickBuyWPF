@@ -18,6 +18,6 @@ public partial class MainWindow : Window
 	private void UpdateTotal(ICollection<Product> products)
 	{
 		decimal total = products.Sum(product => product.Total);
-		TotalPriceField.Text = $"Total: R$ {total:F2}";
+		TotalPriceField.Text = $"Custo Total: R$ {total:F2}";
 	}
 }

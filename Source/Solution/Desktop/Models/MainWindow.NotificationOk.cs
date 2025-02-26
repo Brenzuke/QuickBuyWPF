@@ -12,6 +12,6 @@ public partial class MainWindow : Window
 	/// Displays an informational 
 	/// message to the user
 	/// </summary>
-	private static void NotificationOk() =>
-		MessageBox.Show("Produto adicionado!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+	private static void NotificationOk(string message, string caption) =>
+		MessageBox.Show(message, caption, MessageBoxButton.OK, MessageBoxImage.Information);
 }

@@ -15,7 +15,8 @@ public partial class MainWindow : Window
 	/// </summary>
 	private void ConfirmAndDeleteProduct(Product product)
 	{
-		MessageBoxResult warning = NotificationWarning(product.Name);
+		MessageBoxResult warning = NotificationWarning(
+			$"Deseja remover '{product.Name}'?", "Aviso", MessageBoxButton.YesNo);
 		if (warning != MessageBoxResult.Yes) return;
 		else HandleProductDeletion(product.Name);
 	}

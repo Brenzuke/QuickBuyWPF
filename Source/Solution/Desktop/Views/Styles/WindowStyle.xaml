@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style x:Key="WindowStyle" TargetType="Window">
 		<Setter Property="Width" Value="1000"/>
-		<Setter Property="Height" Value="655"/>
+		<Setter Property="Height" Value="678"/>
 		<Setter Property="MinWidth" Value="400"/>
 		<Setter Property="MinHeight" Value="400"/>
 		<Setter Property="Title" Value="QuickBuy"/>
