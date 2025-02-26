@@ -1,17 +1,27 @@
-﻿namespace Application.Extensives;
+﻿#pragma warning disable IDE0079
+#pragma warning disable SYSLIB1045
+namespace Application.Extensives;
+
+using System;
+using System.Text.RegularExpressions;
 
 /// <summary>
-/// Contains extension methods for <see cref="short"/> type, 
-/// allowing comparisons to be made in a more 
-/// expressive and reusable manner
+/// Provides extension methods 
+/// for <see cref="short"/>.
 /// </summary>
 public static class ShortExtensions
 {
+	/// <summary>
+	/// Checks if a <see cref="short"/> 
+	/// is negative.
+	/// </summary>
+	public static bool IsNegative(this short value)
+		=> value < 1;
 
 	/// <summary>
-	/// Extension method that checks if 
-	/// a <see cref="short"/> value is 
-	/// negative (less than zero)
+	/// Checks if a <see cref="short"/>
+	/// contains only numbers.
 	/// </summary>
-	public static bool IsNegative(this short value) => value < 1;
+	public static bool IsMatch(this short value) =>
+		Regex.IsMatch(Convert.ToString(value), @"^\d+$");
 }
