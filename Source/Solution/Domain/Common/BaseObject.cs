@@ -3,8 +3,7 @@
 using System;
 
 /// <summary>
-/// Base class for entities 
-/// with common metadata.
+/// Base class for entities with common metadata.
 /// </summary>
 public abstract class BaseObject
 {
@@ -17,10 +16,4 @@ public abstract class BaseObject
 	/// Entity creation timestamp.
 	/// </summary>
 	public DateTime CreatedAt { get; set; }
-
-	/// <summary>
-	/// Formatted creation date (dd/MM/yyyy).
-	/// </summary>
-	public string CreatedAtFormatted =>
-		CreatedAt.ToString("dd/MM/yyyy");
 }

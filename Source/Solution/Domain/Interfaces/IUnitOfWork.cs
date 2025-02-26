@@ -4,8 +4,7 @@ using Domain.Common;
 using System.Collections.Generic;
 
 /// <summary>
-/// Defines a contract for 
-/// managing entity persistence.
+/// Defines contract for entity persistence.
 /// </summary>
 public interface IUnitOfWork<T> where T : BaseObject
 {
