@@ -16,7 +16,7 @@ public interface IUnitOfWork<T> where T : BaseObject
 	/// <summary>
 	/// Retrieves all entities.
 	/// </summary>
-	ICollection<T> GetAll();
+	IEnumerable<T> GetAll();
 
 	/// <summary>
 	/// Deletes an entity by name.
