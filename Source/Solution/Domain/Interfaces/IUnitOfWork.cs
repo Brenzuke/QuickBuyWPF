@@ -4,31 +4,23 @@ using Domain.Common;
 using System.Collections.Generic;
 
 /// <summary>
-/// Defines a contract for manages 
-/// the persistence operations entities.
-/// To implement, the class must inherit from
-/// <see cref="BaseObject"/>
+/// Defines a contract for 
+/// managing entity persistence.
 /// </summary>
 public interface IUnitOfWork<T> where T : BaseObject
 {
 	/// <summary>
-	/// Inserts a new entity, which inherits
-	/// from <see cref="BaseObject"/> 
-	/// into the persistence store.
+	/// Inserts a new entity.
 	/// </summary>
 	void Insert(T entity);
 
 	/// <summary>
-	/// Retrieves all entities 
-	/// of type must inherit from 
-	/// <see cref="BaseObject"/>
+	/// Retrieves all entities.
 	/// </summary>
 	ICollection<T> GetAll();
 
 	/// <summary>
-	/// Deletes an entity, which inherits 
-	/// from <see cref="BaseObject"/>,
-	/// by its unique identifier.
+	/// Deletes an entity by name.
 	/// </summary>
 	void DeleteByName(string name);
 }

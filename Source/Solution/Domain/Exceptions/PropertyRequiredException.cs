@@ -3,8 +3,7 @@
 using System;
 
 /// <summary>
-/// Represents an exception 
-/// that is thrown when a property
-/// is required during validation
+/// Exception for missing
+/// required properties.
 /// </summary>
 public sealed class PropertyRequiredException(string message) : Exception(message);

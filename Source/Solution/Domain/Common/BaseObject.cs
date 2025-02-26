@@ -3,24 +3,18 @@
 using System;
 
 /// <summary>
-/// Base class for other entities.
-/// Provides common properties such as
-/// Id, CreatedAt, and UpdatedAt for 
-/// tracking entity metadata.
+/// Base class for entities 
+/// with common metadata.
 /// </summary>
 public abstract class BaseObject
 {
 	/// <summary>
-	/// The name is a unique 
-	/// and descriptive. Allows 
-	/// retrieval or modification
+	/// Unique and descriptive name.
 	/// </summary>
 	public string Name { get; set; }
 
 	/// <summary>
-	/// The date and time when 
-	/// the entity was created.
-	/// Allows retrieval or modification.
+	/// Entity creation timestamp.
 	/// </summary>
 	public DateTime CreatedAt { get; set; }
 }

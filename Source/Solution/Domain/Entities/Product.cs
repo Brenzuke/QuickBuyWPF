@@ -3,30 +3,26 @@
 using Domain.Common;
 
 /// <summary>
-/// Represents a product in the system.
-/// Contains essential information such 
-/// as the name, price, quantity.
+/// Represents a product 
+/// with name, price, and quantity.
 /// </summary>
 public sealed class Product : BaseObject
 {
 	/// <summary>
-	/// The price must be a positive value, 
-	/// used to calculate the total of transactions.
-	/// Allows retrieval or modification.
+	/// Product price, 
+	/// must be positive.
 	/// </summary>
 	public decimal Price { get; set; }
 
 	/// <summary>
-	/// The quantity must be a positive value,
-	/// represents the current stock of the 
-	/// product in the store. Allows 
-	/// retrieval or modification.
+	/// Product quantity 
+	/// in stock, must be positive.
 	/// </summary>
 	public short Quantity { get; set; }
 
 	/// <summary>
-	/// Gets the total value 
-	/// of the product based on 
+	/// Total value based 
+	/// on price and quantity.
 	/// </summary>
 	public decimal Total => Price * Quantity;
 }
