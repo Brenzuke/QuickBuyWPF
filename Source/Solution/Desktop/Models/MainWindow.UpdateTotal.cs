@@ -16,7 +16,7 @@ public partial class MainWindow : Window
 	/// Updates the total price 
 	/// displayed in the UI
 	/// </summary>
-	private void UpdateTotal(ICollection<Product> products)
+	private void UpdateTotal(ISet<Product> products)
 	{
 		decimal total = products.Sum(product => product.SubTotal);
 		TotalPriceField.Inlines.Clear();
