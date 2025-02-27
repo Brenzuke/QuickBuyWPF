@@ -4,26 +4,22 @@ using Application.Services;
 using System.Windows;
 
 /// <summary>
-/// Interaction logic 
-/// for MainWindow.xaml
+/// Interaction logic for MainWindow.xaml
 /// </summary>
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Provides operations 
-	/// for managing products.
+	/// Manages product-related operations.
 	/// </summary>
 	private readonly ProductService _service = new();
 
 	/// <summary>
-	/// Responsible for generating 
-	/// and saving Excel files.
+	/// Generates and saves Excel files.
 	/// </summary>
 	private readonly ExcelExportService _excelService = new();
 
 	/// <summary>
-	/// List of prepositions that 
-	/// should remain lowercase.
+	/// List of prepositions to remain lowercase.
 	/// </summary>
 	private readonly string[] _prepositions =
 	[

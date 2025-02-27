@@ -44,19 +44,70 @@
 		<ListView x:Name="ProductList" Grid.Row="4" Grid.ColumnSpan="2" Margin="5" Height="350">
 			<ListView.View>
 				<GridView>
-					<GridViewColumn Header="Nome" DisplayMemberBinding="{Binding Name}" Width="151"/>
-					<GridViewColumn Header="Preço" DisplayMemberBinding="{Binding Price}" Width="151"/>
-					<GridViewColumn Header="Quantidade" DisplayMemberBinding="{Binding Quantity}" Width="151"/>
-					<GridViewColumn Header="Criado em" DisplayMemberBinding="{Binding CreatedAtFormatted}" Width="151"/>
-					<GridViewColumn Header="Total" DisplayMemberBinding="{Binding Total}" Width="151"/>
-					<GridViewColumn Header="Ações" Width="151">
+					<GridViewColumn Width="151">
+						<GridViewColumn.Header>
+							<TextBlock Text="Nome" FontWeight="Bold"/>
+						</GridViewColumn.Header>
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Name}" Margin="50, 0, 50, 0" FontWeight="DemiBold"/>
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="151">
+						<GridViewColumn.Header>
+							<TextBlock Text="Preço" FontWeight="Bold"/>
+						</GridViewColumn.Header>
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Price, StringFormat={}{0:C2}}" Foreground="Blue" 
+										   FontWeight="DemiBold" Margin="50, 0, 50, 0"/>
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="151">
+						<GridViewColumn.Header>
+							<TextBlock Text="Quantidade" FontWeight="Bold"/>
+						</GridViewColumn.Header>
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Quantity}" Margin="50, 0, 50, 0" FontWeight="DemiBold"/>
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="151">
+						<GridViewColumn.Header>
+							<TextBlock Text="Criado em" FontWeight="Bold"/>
+						</GridViewColumn.Header>
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding CreatedAt}"  Margin="35, 0, 35, 0" FontWeight="DemiBold"/>
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="151">
+						<GridViewColumn.Header>
+							<TextBlock Text="SubTotal" FontWeight="Bold"/>
+						</GridViewColumn.Header>
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Price, StringFormat={}{0:C2}}" Foreground="Blue" 
+										   FontWeight="DemiBold" Margin="50, 0, 50, 0"/>
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="151">
+						<GridViewColumn.Header>
+							<TextBlock Text="Ações" FontWeight="Bold"/>
+						</GridViewColumn.Header>
 						<GridViewColumn.CellTemplate>
 							<DataTemplate>
 								<Button Content="Remover"
 										Click="DeleteProductFromCart"
 										Tag="{Binding}" 
 										Style="{StaticResource ButtonStyle}"
-										ToolTip="Exclui da lista"/>
+										ToolTip="Exclui da lista"
+										Margin="30, 5, 30, 5" />
 							</DataTemplate>
 						</GridViewColumn.CellTemplate>
 					</GridViewColumn>
@@ -65,7 +116,7 @@
 		</ListView>
 
 		<!-- Total -->
-		<TextBlock x:Name="TotalPriceField" Grid.Row="5" Grid.ColumnSpan="2" Text="Custo Total: R$ 0,00" 
+		<TextBlock x:Name="TotalPriceField" Grid.Row="5" Grid.ColumnSpan="2" Text="Total: R$ 0,00" 
 				   FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" Margin="5,15,5,5" ToolTip="Soma total dos itens"/>
 
 		<!-- Export to Excel -->

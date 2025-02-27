@@ -3,15 +3,14 @@
 using System.Windows;
 
 /// <summary>
-/// Interaction logic 
-/// for MainWindow.xaml
+/// Interaction logic for MainWindow.xaml
 /// </summary>
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Handles the export of data to an 
-	/// Excel file when triggered 
-	/// by the UI event.
+	/// Exports data to an Excel 
+	/// file when triggered by 
+	/// the UI event.
 	/// </summary>
 	private async void ExportToExcel(object sender, RoutedEventArgs e)
 	{

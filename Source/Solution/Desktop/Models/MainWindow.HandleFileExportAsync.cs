@@ -1,6 +1,7 @@
 ﻿namespace Desktop.Models;
 
 using Microsoft.Win32;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -20,7 +21,7 @@ public partial class MainWindow : Window
 		if (saveFileDialog.ShowDialog() == true)
 		{
 			string filePath = saveFileDialog.FileName;
-			await _excelService.ExportAsync([.. _service.GetAll()], filePath);
+			await _excelService.ExportAsync(_service.GetAll().ToHashSet(), filePath);
 			NotificationOk($"Arquivo salvo em: {filePath}", "Exportação Concluída");
 		}
 	}

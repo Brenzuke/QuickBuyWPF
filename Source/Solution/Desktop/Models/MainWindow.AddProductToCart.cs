@@ -4,15 +4,13 @@ using System;
 using System.Windows;
 
 /// <summary>
-/// Interaction logic 
-/// for MainWindow.xaml
+/// Interaction logic for MainWindow.xaml
 /// </summary>
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Adds a product to the 
-	/// cart using input 
-	/// field values.
+	/// Adds a product to cart 
+	/// from input values.
 	/// </summary>
 	private void AddProductToCart(object sender, RoutedEventArgs e)
 	{

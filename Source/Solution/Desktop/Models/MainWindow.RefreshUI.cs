@@ -4,20 +4,19 @@ using System.Linq;
 using System.Windows;
 
 /// <summary>
-/// Interaction logic 
-/// for MainWindow.xaml
+/// Interaction logic for MainWindow.xaml
 /// </summary>
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Refreshes the UI to reflect 
-	/// updated product list, clear 
-	/// fields and total price
+	/// Updates UI with product list,
+	/// clears fields and resets 
+	/// total price.
 	/// </summary>
 	private void RefreshUI()
 	{
 		ProductList.ItemsSource = _service.GetAll().ToHashSet();
-		UpdateTotal(_service.GetAll());
+		UpdateTotal(_service.GetAll().ToHashSet());
 		ClearFields();
 	}
 }

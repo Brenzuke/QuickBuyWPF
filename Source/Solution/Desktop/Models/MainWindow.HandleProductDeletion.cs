@@ -3,15 +3,13 @@
 using System.Windows;
 
 /// <summary>
-/// Interaction logic 
-/// for MainWindow.xaml
+/// Interaction logic for MainWindow.xaml
 /// </summary>
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Handles the deletion of a product 
-	/// by its name and updates 
-	/// the UI accordingly
+	/// Handles product deletion by name 
+	/// and updates the UI accordingly.
 	/// </summary>
 	private void HandleProductDeletion(string productName)
 	{

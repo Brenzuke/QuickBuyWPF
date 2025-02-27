@@ -1,25 +1,24 @@
 ﻿namespace Desktop.Models;
 
+using Application.Extensives;
 using Domain.Entities;
 using System;
 using System.Windows;
 
 /// <summary>
-/// Interaction logic 
-/// for MainWindow.xaml
+/// Interaction logic for MainWindow.xaml
 /// </summary>
 public partial class MainWindow : Window
 {
 	/// <summary>
-	/// Creates a new Product 
-	/// instance based on the 
-	/// form input fields
+	/// Creates a new product 
+	/// from form inputs.
 	/// </summary>
 	private Product CreateProduct() =>
 		new()
 		{
 			Name = NameField.Text,
-			CreatedAt = DateTime.Now.Date,
+			CreatedAt = DateTime.Now.Date.ToFormattedBrazilianDate(),
 			Price = Convert.ToDecimal(PriceField.Text),
 			Quantity = Convert.ToInt16(QuantityField.Text)
 		};
