@@ -3,10 +3,13 @@
 	<PropertyGroup>
 		<UseWPF>true</UseWPF>
 		<OutputType>WinExe</OutputType>
+		<AssemblyName>QuickBuy</AssemblyName>
 		<TargetFramework>net8.0-windows</TargetFramework>
+		<ApplicationIcon>Icons\ShoppingCart.ico</ApplicationIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Remove="Icons\ShoppingCart.ico" />
 		<None Remove="Images\ShoppingCart.png" />
 	</ItemGroup>
 
@@ -20,6 +23,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Resource Include="Icons\ShoppingCart.ico" />
 		<Resource Include="Images\ShoppingCart.png" />
 	</ItemGroup>
 
