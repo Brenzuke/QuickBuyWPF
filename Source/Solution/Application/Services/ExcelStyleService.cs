@@ -109,7 +109,7 @@ public sealed class ExcelStyleService(IXLWorksheet worksheet) : IExportStyleServ
 		(
 			cell,
 			cell => cell.Style.NumberFormat.SetFormat("R$ #,##0.00"),
-			cell => cell.Style.Font.SetFontColor(XLColor.FromArgb(255, 0, 0))
+			cell => cell.Style.Font.SetFontColor(XLColor.FromArgb(255, 0, 0, 255))
 		);
 	}
 

@@ -50,7 +50,7 @@
 						</GridViewColumn.Header>
 						<GridViewColumn.CellTemplate>
 							<DataTemplate>
-								<TextBlock Text="{Binding Name}" Margin="50, 0, 50, 0" FontWeight="DemiBold"/>
+								<TextBlock Text="{Binding Name}" FontWeight="DemiBold"/>
 							</DataTemplate>
 						</GridViewColumn.CellTemplate>
 					</GridViewColumn>
