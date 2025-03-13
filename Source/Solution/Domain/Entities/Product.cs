@@ -9,20 +9,18 @@ using Domain.Common;
 public sealed class Product : BaseEntity
 {
 	/// <summary>
-	/// This value must be 
-	/// greater than zero.
+	/// Value must be greater than zero.
 	/// </summary>
 	public decimal Price { get; set; }
 
 	/// <summary>
-	/// This value must be 
-	/// a positive number.
+	/// Value must be a positive number.
 	/// </summary>
 	public short Quantity { get; set; }
 
 	/// <summary>
-	/// The total value of the product stock, 
-	/// calculated as Price * Quantity.
+	/// Total value of the product stock, 
+	/// calculated as <c>Price * Quantity</c>.
 	/// </summary>
 	public decimal SubTotal => Price * Quantity;
 }
