@@ -3,6 +3,7 @@
 using System;
 
 /// <summary>
-/// Exception for missing required properties.
+/// Exception thrown when 
+/// missing required properties.
 /// </summary>
 public sealed class PropertyRequiredException(string message) : Exception(message);

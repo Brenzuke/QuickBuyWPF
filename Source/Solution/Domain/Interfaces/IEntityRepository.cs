@@ -4,9 +4,11 @@ using Domain.Common;
 using System.Collections.Generic;
 
 /// <summary>
-/// Defines contract for entity persistence.
+/// This interface provides methods to insert, 
+/// retrieve, and delete entities 
+/// in a persistence store.
 /// </summary>
-public interface IUnitOfWork<T> where T : BaseObject
+public interface IEntityRepository<T> where T : BaseEntity
 {
 	/// <summary>
 	/// Inserts a new entity.

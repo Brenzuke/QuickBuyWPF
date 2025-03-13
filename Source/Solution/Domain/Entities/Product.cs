@@ -3,22 +3,26 @@
 using Domain.Common;
 
 /// <summary>
-/// Represents a product with name, price, and quantity.
+/// Inherits common properties
+/// from <see cref="BaseEntity"/>.
 /// </summary>
-public sealed class Product : BaseObject
+public sealed class Product : BaseEntity
 {
 	/// <summary>
-	/// Product price, must be positive.
+	/// This value must be 
+	/// greater than zero.
 	/// </summary>
 	public decimal Price { get; set; }
 
 	/// <summary>
-	/// Product quantity in stock, must be positive.
+	/// This value must be 
+	/// a positive number.
 	/// </summary>
 	public short Quantity { get; set; }
 
 	/// <summary>
-	/// Total value based on price and quantity.
+	/// The total value of the product stock, 
+	/// calculated as Price * Quantity.
 	/// </summary>
 	public decimal SubTotal => Price * Quantity;
 }
