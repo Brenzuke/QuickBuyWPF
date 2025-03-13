@@ -8,7 +8,7 @@ public static class BaseExtensions
 {
 	/// <summary>
 	/// Determines whether the specified 
-	/// <see cref="BaseEntity"/> is null.
+	/// <see cref="BaseEntity"/> is <c>null</c>.
 	/// </summary>
 	public static bool IsNull(this BaseEntity value) => value is null;
 }

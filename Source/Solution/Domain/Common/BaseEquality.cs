@@ -7,7 +7,7 @@ using System.Collections.Generic;
 /// <summary>
 /// Provides equality 
 /// comparison for <see cref="BaseEntity"/>
-/// instances based on the Name property.
+/// instances based on the <c>Name</c> property.
 /// </summary>
 public sealed class BaseEquality : IEqualityComparer<BaseEntity>
 {
@@ -25,5 +25,5 @@ public sealed class BaseEquality : IEqualityComparer<BaseEntity>
 	/// instance based on its Name property.
 	/// </summary>
 	public int GetHashCode(BaseEntity obj) =>
-		obj.IsNull() ? throw new EntityHashCodeNullException(nameof(obj)) : HashCode.Combine(obj.Name);
+		obj.IsNull() ? throw new HashCodeNullException(nameof(obj)) : HashCode.Combine(obj.Name);
 }
