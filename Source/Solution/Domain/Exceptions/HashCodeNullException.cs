@@ -2,5 +2,4 @@
 
 using System;
 
-internal sealed class HashCodeNullException(string message)
-	: Exception(message);
+internal sealed class HashCodeNullException(string message) : Exception(message);

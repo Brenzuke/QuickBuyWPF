@@ -1,46 +1,16 @@
 ﻿namespace Application.Services;
 
-using Application.Extensives;
 using Application.Interfaces;
-using Domain.Common;
 using Domain.Entities;
-using Domain.Extensives;
 using System.Collections.Generic;
 
-/// <summary>
-/// Manages product operations, preventing duplicates.
-/// </summary>
-public sealed class ProductService : IProductService
+public sealed class ProductService(IProductRepository repository)
 {
-	/// <summary>
-	/// Stores products in a 
-	/// <see cref="HashSet{T}"/>.
-	/// </summary>
-	public ISet<Product> Products { get; private set; } =
-		new HashSet<Product>(new ProductComparer());
+	public void AddExecute(Product entity) => repository.Add(entity);
 
-	/// <summary>
-	/// Adds a product if it's not null.
-	/// </summary>
-	public void Insert(Product entity)
-	{
-		if (entity.IsNull()) return;
-		Products.Add(entity);
-	}
+	public IEnumerable<Product> GetAllExecute() => repository.GetAll();
 
-	/// <summary>
-	/// Returns all stored products.
-	/// </summary>
-	public IEnumerable<Product> GetAll() =>
-		Products;
+	public Product GetByNameExecute(string name) => repository.GetByName(name);
 
-	/// <summary>
-	/// Removes a product by name.
-	/// </summary>
-	public void DeleteByName(string name)
-	{
-		Product product = Products.GetByName(name);
-		if (product.IsNull()) return;
-		Products.Remove(product);
-	}
+	public void DeleteByNameExecute(string name) => repository.DeleteByName(name);
 }
