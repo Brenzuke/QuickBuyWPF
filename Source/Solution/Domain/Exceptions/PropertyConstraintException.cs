@@ -2,5 +2,5 @@
 
 using System;
 
-public sealed class PropertyConstraintException(string message)
+internal sealed class PropertyConstraintException(string message)
 	: Exception(message);

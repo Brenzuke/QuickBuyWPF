@@ -2,5 +2,5 @@
 
 using System;
 
-public sealed class HashCodeNullException(string message)
+internal sealed class HashCodeNullException(string message)
 	: Exception(message);
