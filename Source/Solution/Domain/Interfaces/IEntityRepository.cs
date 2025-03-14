@@ -7,7 +7,7 @@ using System.Collections.Generic;
 /// Defines a repository for managing 
 /// entities in a persistence store.
 /// </summary>
-public interface IEntityRepository<T> where T : BaseEntity
+internal interface IEntityRepository<T> where T : BaseEntity
 {
 	/// <summary>
 	/// Inserts a new entity into the repository.
@@ -44,5 +44,5 @@ public interface IEntityRepository<T> where T : BaseEntity
 	/// <exception cref="EntityNotFoundException">
 	/// Thrown if no entity with the specified name is found.
 	/// </exception>
-	void DeleteByName(T entity);
+	void DeleteByName(string name);
 }

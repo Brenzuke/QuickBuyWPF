@@ -6,4 +6,4 @@ using System;
 /// Exception thrown when 
 /// property constraint violations.
 /// </summary>
-public sealed class PropertyConstraintException(string message) : Exception(message);
+internal sealed class PropertyConstraintException(string message) : Exception(message);

@@ -6,4 +6,4 @@ using System;
 /// Exception thrown when 
 /// missing required properties.
 /// </summary>
-public sealed class PropertyRequiredException(string message) : Exception(message);
+internal sealed class PropertyRequiredException(string message) : Exception(message);

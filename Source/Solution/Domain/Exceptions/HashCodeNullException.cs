@@ -7,4 +7,4 @@ using System;
 /// an attempt is made to 
 /// calculate a hash code null
 /// </summary>
-public sealed class HashCodeNullException(string message) : Exception(message);
+internal sealed class HashCodeNullException(string message) : Exception(message);

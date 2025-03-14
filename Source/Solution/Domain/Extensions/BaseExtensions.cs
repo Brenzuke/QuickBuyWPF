@@ -1,10 +1,12 @@
-﻿namespace Domain.Common;
+﻿namespace Domain.Extensions;
+
+using Domain.Common;
 
 /// <summary>
 /// Provides extension methods for 
 /// the <see cref="BaseEntity"/> type.
 /// </summary>
-public static class BaseExtensions
+internal static class BaseExtensions
 {
 	/// <summary>
 	/// Determines whether the specified 

@@ -7,4 +7,4 @@ using System;
 /// cannot be saved because 
 /// it is null.
 /// </summary>
-public sealed class UnsavedNullException(string message) : Exception(message);
+internal sealed class UnsavedNullException(string message) : Exception(message);

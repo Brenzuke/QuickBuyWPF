@@ -6,7 +6,7 @@ using Domain.Common;
 /// Defines a contract for validating 
 /// entities of type <typeparamref name="T"/>.
 /// </summary>
-public interface IEntityValidator<T> where T : BaseEntity
+internal interface IEntityValidator<T> where T : BaseEntity
 {
 	/// <summary>
 	/// Validates the specified entity.

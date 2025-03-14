@@ -7,4 +7,4 @@ using System;
 /// entity is not found in 
 /// the repository.
 /// </summary>
-public sealed class EntityNotFoundException(string message) : Exception(message);
+internal sealed class EntityNotFoundException(string message) : Exception(message);

@@ -1,6 +1,7 @@
 ﻿namespace Domain.Common;
 
 using Domain.Exceptions;
+using Domain.Extensions;
 using System;
 using System.Collections.Generic;
 
