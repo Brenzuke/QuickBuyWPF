@@ -3,7 +3,7 @@
 using Domain.Common;
 using System.Collections.Generic;
 
-internal interface IEntityRepository<T> where T : BaseEntity
+public interface IEntityRepository<T> where T : BaseEntity
 {
 	void Add(T entity);
 	T GetByName(string name);

@@ -2,4 +2,5 @@
 
 using System;
 
-public sealed class EntityNotFoundException(string message) : Exception(message);
+public sealed class EntityNotFoundException(string message)
+	: Exception(message);

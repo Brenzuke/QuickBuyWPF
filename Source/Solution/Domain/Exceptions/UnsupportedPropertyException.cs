@@ -2,4 +2,5 @@
 
 using System;
 
-internal sealed class UnsupportedPropertyException(string message) : Exception(message);
+internal sealed class UnsupportedPropertyException(string message)
+	: Exception(message);

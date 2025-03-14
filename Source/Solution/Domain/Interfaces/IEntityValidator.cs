@@ -2,7 +2,7 @@
 
 using Domain.Common;
 
-internal interface IEntityValidator<T> where T : BaseEntity
+public interface IEntityValidator<T> where T : BaseEntity
 {
 	void Validate(T entity);
 }
